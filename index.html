@@ -1,0 +1,89 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <style type="text/css">
+  input {
+    width: 300px;
+    color: #fff;
+    background-color: rgba(35,35,35,0.5);
+    border-radius: 8px;
+    transition: color 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 0;
+    font-size: 1.2em;
+    padding: 4px;
+    clear:both;
+    float:left;
+  }
+  input:focus {
+    outline: 0;
+  }
+  body {
+    background-image: url(tlo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  p {
+    color: white;
+    font-family: sans-serif;
+    transition: transform 0.6s ease;
+    clear:both;
+    float:left;
+  }
+  button {
+    background-color: rgba(88, 107, 149, 0.6);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    clear:both;
+    float:left;
+    color: white;
+    border: 0;
+    font-size: 1.2em;
+    padding: 4px;
+    margin-top: 12px;
+    backdrop-filter: blur(5px);
+  }
+  button:hover {
+    background-color: rgba(59, 57, 97, 0.6)
+  }
+  button:focus {
+    outline: 0;
+  }
+  #pudelko {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+  }
+  .notice {
+    animation: notice_anim 1.5s ease 1;
+  }
+  @keyframes notice_anim {
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  .blad {
+    background-color: rgba(255,35,35,0.5);
+  }
+  </style>
+</head>
+<body>
+  <div id="pudelko">
+    <input type="text" id="cyfra1" placeholder="Wpisz działanie..."></input>
+    <button id="btn" onclick="oblicz()">Oblicz</button>
+    <p id="wynik">Wynik: </p>
+  </div>
+</body>
+</html>
